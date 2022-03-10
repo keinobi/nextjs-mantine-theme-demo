@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    touch-action: manipulation;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: 14px;
+    font-feature-settings: "pkna";
+    letter-spacing: 0.01em;
+    word-break: break-all;
+    overflow-wrap: break-word; /* Safari doesn't support 'anywhere' */
+    overflow-wrap: anywhere;
+
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
