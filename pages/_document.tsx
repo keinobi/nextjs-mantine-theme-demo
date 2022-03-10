@@ -1,6 +1,11 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import { createGetInitialProps } from '@mantine/next'
+
+const getInitialProps = createGetInitialProps()
 
 export default class Document extends NextDocument {
+  static getInitialProps = getInitialProps
+
   render () {
     return (
       <Html lang='ja'>
@@ -9,7 +14,7 @@ export default class Document extends NextDocument {
           <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
           <link rel='manifest' href='/site.webmanifest' />
         </Head>
-        <body className='text-gray-800 bg-white'>
+        <body>
           <Main />
           <NextScript />
         </body>
